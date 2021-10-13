@@ -13,6 +13,6 @@ class Student:
             dic = {}
             for i in attrs:
                 if i in self.__dict__:
-                    k[i] = self.__dict__[i]
+                    dic[i] = self.__dict__[i]
             return dic
         return self.__dict__
