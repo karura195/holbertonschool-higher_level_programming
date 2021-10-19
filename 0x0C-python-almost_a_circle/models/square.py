@@ -17,14 +17,14 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def size(self, value):
+    def size(self, size):
         """size setter"""
-        self.width = value
-        self.height = value
+        self.width = size
+        self.height = size
 
     def update(self, *args, **kwargs):
         """square arguments"""
-        args_list = ["id", "width", "x", "y"]
+        list = ["id", "width", "x", "y"]
         for i in range(len(args)):
             setattr(self, list[i], args[i])
         if len(args) == 0:
@@ -35,3 +35,9 @@ class Square(Rectangle):
         """__str__ for square"""
         return ("[Square] {:d} {:d}/{:d} - {:d}"
                 .format(self.id, self.x, self.y, self.width))
+
+    def to_dictionary(self):
+        """Square dictionary"""
+        key_list = ["id", "size", "x", "y"]
+        value_list = [self.id, self.width, self.x, self.y]
+        return dict(zip(key_list, value_list))
