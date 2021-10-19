@@ -93,6 +93,6 @@ class Rectangle(Base):
                 .format(self.id, self.__x, self.__y,
                         self.__width, self.__height))
 
-    def update(self, *args, **kwargs):
+    def update(self, *args):
         """Rectangle arguments"""
         args_list = ["id", "width", "height", "x", "y"]
