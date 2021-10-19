@@ -56,7 +56,7 @@ class Base:
         elif cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
-        return dummy 
+        return dummy
 
     @classmethod
     def load_from_file(cls):
