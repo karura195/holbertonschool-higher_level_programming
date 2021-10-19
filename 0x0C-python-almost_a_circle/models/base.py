@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Class"""
 
+import json
+import csv
+import turtle
 
 class Base:
     """Base class"""
