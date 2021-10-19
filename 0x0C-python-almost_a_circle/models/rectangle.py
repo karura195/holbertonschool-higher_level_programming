@@ -16,11 +16,6 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def __str__(self):
-        """__str__ method"""
-        return ("[rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
-                .format(self.id, self.x, self.y, self.width, self.height))
-
     @property
     def width(self):
         """width"""
@@ -87,3 +82,10 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """__str__ method"""
+        return ("[rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
+                .format(self.id, self.x, self.y, self.width, self.height))
+
+
