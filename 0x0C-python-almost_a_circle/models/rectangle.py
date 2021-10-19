@@ -7,6 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class Rectangle inherits from Base"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Define class"""
         super().__init__(id)
@@ -52,7 +53,7 @@ class Rectangle(Base):
     def x(self, x):
         """x setter"""
         if type(x) is not int:
-            raise TypeError("x must be and integer")
+            raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
         self.__x = x
@@ -66,7 +67,7 @@ class Rectangle(Base):
     def y(self, y):
         """y setter"""
         if type(y) is not int:
-            raise TypeError("y must be and integer")
+            raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
         self.__y = y
