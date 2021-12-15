@@ -1,1 +1,1 @@
-Objects and classes in JavaScript
+Higher level programming languages
