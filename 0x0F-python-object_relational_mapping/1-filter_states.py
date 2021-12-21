@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" lists all states with a name starting with N (upper N) """
 from sys import argv
 import MySQLdb
 
