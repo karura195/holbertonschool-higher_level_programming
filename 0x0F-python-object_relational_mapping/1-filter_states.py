@@ -9,7 +9,8 @@ if __name__ == "__main__":
                          user=argv[1], passwd=argv[2],
                          db=argv[3], charset="utf8")
     curs = db.cursor()
-    sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+    sql = "SELECT * FROM states WHERE name COLLATE utf8mb4_bin "
+    sql += "LIKE 'N%' ORDER BY states.id ASC"
     curs.execute(sql)
     data = curs.fetchall()
     for row in data:
