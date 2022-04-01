@@ -5,7 +5,7 @@ if (!n) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < n; i++) {
-    let sqr = 'X';
+    const sqr = 'X';
     console.log(sqr.repeat(n));
   }
 }
