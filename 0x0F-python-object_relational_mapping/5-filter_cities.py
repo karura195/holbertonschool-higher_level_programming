@@ -13,8 +13,9 @@ if __name__ == '__main__':
     sql = "SELECT cities.name "
     sql += "FROM cities JOIN states "
     sql += "ON cities.state_id = states.id "
-    sql += "WHERE states.name = '{state}' ORDER by cities.id ASC"
-    cur.execute(sql.format(state))
+    sql += "WHERE states.name = %s ORDER by cities.id ASC"
+    params = (state,)
+    cur.execute(sql.format(sql, params))
     query_rows = cur.fetchall()
 
     print(", ".join(row[0] for row in query_rows))
