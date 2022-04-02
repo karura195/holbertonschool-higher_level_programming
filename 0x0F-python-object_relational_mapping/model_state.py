@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Contains the class definition of a State and an
-instance Base = declarative_base() """
+""" Contains the class definition of a State """
 from sqlalchemy import Column, Integer, String
 from model_state import Base
 from sqlalchemy import ForeignKey
