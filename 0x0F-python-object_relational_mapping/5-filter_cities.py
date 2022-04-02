@@ -10,12 +10,12 @@ if __name__ == '__main__':
                          passwd=argv[2], db=argv[3], charset="utf8")
     state = argv[4]
     cur = db.cursor()
-    sql = "SELECT cities.name "
-    sql += "FROM cities JOIN states "
-    sql += "ON cities.state_id = states.id "
-    sql += "WHERE states.name = %s ORDER by cities.id ASC"
-    params = (state,)
-    cur.execute(sql.format(sql, params))
+    sql = "SELECT a.id, a.name "
+    sql += "FROM cities a JOIN states b "
+    sql += "ON a.state_id = b.id "
+    sql += "WHERE b.name COLLATE utf8mb4_bin = %s ORDER BY 1;"
+    params = (state, )
+    cur.execute(sql, params)
     query_rows = cur.fetchall()
 
     print(", ".join(row[0] for row in query_rows))
